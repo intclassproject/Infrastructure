@@ -107,9 +107,13 @@ pipeline {
             steps {
                 script {
                     dir('automation') {
+                        automationVersion = releaseFile["release"]["automation"]
+                        sh "git checkout ${automationVersion}"
                         for ( service in servicesList ) {
-                            ipList = releaseFile["release"]["services"]["${service}"]["servers"]
-                            sh ""
+                           serverAddresses = releaseFile["release"]["services"]["${service}"]["servers"]
+                           for ( address in serverAddresses ) {
+                              sh "./sanity_tests.sh ${service} ${address}"
+                           }
                         }
                     }
                 }
