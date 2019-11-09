@@ -16,8 +16,8 @@
     "ssh_private_key_file": "/var/jenkins_home/aws_keys/aws.pem",
     "ssh_username": "ubuntu",
     "ssh_interface": "public_ip",
-    "security_group_id": "sg-0",
-    "subnet_id": "subnet-1",
+    "security_group_id": "sg-08768ec5c7dc82ccc",
+    "subnet_id": "subnet-0138de6ae3d044a36",
     "tags": {
       "purpose": "golden.image"
     },
