@@ -2,7 +2,7 @@
   "variables": {
     "aws_access_key": "",
     "aws_secret_key": "",
-    "target_regions": "us-east-2,us-east-1"
+    "target_regions": "us-east-1"
   },
   "builders": [{
     "type": "amazon-ebs",
@@ -16,8 +16,8 @@
     "ssh_private_key_file": "/var/jenkins_home/aws_keys/aws.pem",
     "ssh_username": "ubuntu",
     "ssh_interface": "public_ip",
-    "security_group_id": "sg-0",
-    "subnet_id": "subnet-1",
+    "security_group_id": "sg-8b1ec2d9",
+    "subnet_id": "subnet-e6ffffc8",
     "tags": {
       "purpose": "golden.image"
     },
@@ -27,7 +27,7 @@
         "name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*",
         "root-device-type": "ebs"
       },
-      "owners": ["09"],
+      "owners": ["099720109477"],
       "most_recent": true
     },
     "instance_type": "t2.micro",
