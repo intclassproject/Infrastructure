@@ -13,7 +13,7 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
     }
     agent {
-        label 'master'
+        label 'oraw'
     }
     stages {
         stage ('Checkout') {
