@@ -3,7 +3,7 @@ pipeline {
         timeout(time: 20, unit: 'MINUTES')
     }
     agent {
-        label 'master'
+        label 'oraw'
     }
     stages {
         stage('Validate json') {
